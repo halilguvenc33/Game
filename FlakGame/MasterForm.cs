@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace FlakGame
 {
-    public partial class Form1 : Form
+    public partial class MasterForm : Form
     {
-        public Form1()
+        public MasterForm()
         {
             InitializeComponent();
+        }
+
+        private void MasterForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
