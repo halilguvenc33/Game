@@ -101,6 +101,7 @@ namespace FlakGame
             this.Text = "FlatGame";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MasterForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MasterForm_KeyDown);
             this.informationPanel.ResumeLayout(false);
             this.informationPanel.PerformLayout();
             this.ResumeLayout(false);
