@@ -53,6 +53,7 @@
     </Compile>
     <Compile Include="Contrete\Game.cs" />
     <Compile Include="Interface\IGame.cs" />
+    <Compile Include="Interface\ImoveObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

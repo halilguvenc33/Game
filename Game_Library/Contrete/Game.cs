@@ -39,7 +39,7 @@ namespace Game_Library.Contrete
 
         private void createFlak()
         {
-            var _flak = new flak(_flakArea.Width)
+            var _flak = new flak(_flakArea.Width, _flakArea.Size)
             {
                 Image = Image.FromFile(@"Flak.png")
             };

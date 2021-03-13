@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Game_Library.Interface;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,13 +9,33 @@ using System.Windows.Forms;
 
 namespace Game_Library.Abstract
 {
-    internal abstract class anObject : PictureBox
+    internal abstract class anObject : PictureBox, ImoveObject
     {
-        protected anObject()
+        
+
+        public Size Movementarea { get; }
+
+        public int MovementRange { get; protected set; }
+
+        public bool moveOb(Directt directt)
         {
-            SizeMode = PictureBoxSizeMode.AutoSize;
+            switch(directt)
+            {
+                case directt.left:
+                    break;
+                case directt.right:
+                    break;
+
+
+
+            }
         }
 
+        protected anObject(Size movementarea)
+        {
+            SizeMode = PictureBoxSizeMode.AutoSize;
+            Movementarea = movementarea;
+        }
     }
     
 }
