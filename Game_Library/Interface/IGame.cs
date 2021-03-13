@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 namespace Game_Library.Interface
 {
     internal interface IGame
-    {   bool isGameContinue { get; private set; }
-        TimeSpan gettingTime { get; }
+    {
+        bool GameContinue { get; }
+
         void startGame();
         void flakFire();
 

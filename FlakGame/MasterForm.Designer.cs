@@ -33,14 +33,12 @@ namespace FlakGame
             this.flakArea = new System.Windows.Forms.Panel();
             this.warPanel = new System.Windows.Forms.Panel();
             this.informationLabel = new System.Windows.Forms.Label();
-            this.timeLabel = new System.Windows.Forms.Label();
             this.informationPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // informationPanel
             // 
             this.informationPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.informationPanel.Controls.Add(this.timeLabel);
             this.informationPanel.Controls.Add(this.informationLabel);
             this.informationPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.informationPanel.Location = new System.Drawing.Point(0, 0);
@@ -71,23 +69,12 @@ namespace FlakGame
             this.informationLabel.AutoSize = true;
             this.informationLabel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.informationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.informationLabel.Location = new System.Drawing.Point(25, 9);
+            this.informationLabel.Location = new System.Drawing.Point(288, 9);
             this.informationLabel.Name = "informationLabel";
             this.informationLabel.Size = new System.Drawing.Size(487, 25);
             this.informationLabel.TabIndex = 0;
             this.informationLabel.Text = "Press ENTER for start Game. Press SPACE for fire flak";
             this.informationLabel.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // timeLabel
-            // 
-            this.timeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.timeLabel.Location = new System.Drawing.Point(911, 9);
-            this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(140, 41);
-            this.timeLabel.TabIndex = 0;
-            this.timeLabel.Text = "00:00";
-            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MasterForm
             // 
@@ -98,7 +85,7 @@ namespace FlakGame
             this.Controls.Add(this.flakArea);
             this.Controls.Add(this.informationPanel);
             this.Name = "MasterForm";
-            this.Text = "FlatGame";
+            this.Text = "FlakGame";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MasterForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MasterForm_KeyDown);
@@ -114,7 +101,6 @@ namespace FlakGame
         private System.Windows.Forms.Label informationLabel;
         private System.Windows.Forms.Panel flakArea;
         private System.Windows.Forms.Panel warPanel;
-        private System.Windows.Forms.Label timeLabel;
     }
 }
 

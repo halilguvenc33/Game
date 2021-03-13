@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Game_Library.Interface;
+using System.Drawing;
 
 namespace Game_Library.Contrete
 {
     public class Game : IGame
     {
-        public bool isGameContinue => throw new NotImplementedException();
+        private readonly Panel _flakArea;
 
-        public TimeSpan gettingTime => throw new NotImplementedException();
+        public bool GameContinue { get; private set; }
 
         public void flakFire()
         {
@@ -20,21 +22,38 @@ namespace Game_Library.Contrete
 
         public void startGame()
         {
-            if (!isGameContinue)
+            if (!GameContinue)
             {
-                isGameContinue = true;
+                GameContinue = true;
+            
+                createFlak();
+    
             }
 
         }
+        public Game (Panel flakArea)
+        {
+            _flakArea = flakArea;
 
-        public void gameOver()
+        }
 
-         {
-            if (isGameContinue)
+        private void createFlak()
+        {
+            var _flak = new flak(_flakArea.Width)
             {
-                isGameContinue = false;
+                Image = Image.FromFile(@"Flak.png")
+            };
+           
+            _flakArea.Controls.Add(_flak);
+
+        }
+
+        public void stopGame()
+        {
+            if (GameContinue)
+            {
+                GameContinue = false;
             }
-        }            
+        }
     }
 }
-

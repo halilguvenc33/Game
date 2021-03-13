@@ -33,6 +33,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,13 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\anObject.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Contrete\flak.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Contrete\Game.cs" />
     <Compile Include="Interface\IGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Abstract\" />
     <Folder Include="Enum\" />
     <Folder Include="Static\" />
   </ItemGroup>

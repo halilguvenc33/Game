@@ -13,11 +13,12 @@ namespace FlakGame
 {
     public partial class MasterForm : Form
     {
-        private readonly Game _game = new Game();
+        private readonly Game _game;
 
         public MasterForm()
         {
             InitializeComponent();
+            _game = new Game(flakArea);
         }
 
         private void MasterForm_Load(object sender, EventArgs e)
